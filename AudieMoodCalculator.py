@@ -1,8 +1,10 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Written by: Katie House, Julia Antonou, Lucille Tasker, 
 #                and Srilekha Nuli
-#
+#  
 #               SheHacks Boston 2018
+#             
+#   ~~ Script Adapted from Google API Doc Examples ~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 import tkinter
@@ -15,13 +17,11 @@ def Mbox(title, text, style):
 root = tkinter.Tk()
 
 def RefreashGraph():
-    # [START import_libraries]
+    # Import Libraries
     import argparse
     import io
     import shutil
     import os
-
-    # [END import_libraries]
 
     def Show_Plot():
         import datetime
@@ -45,7 +45,7 @@ def RefreashGraph():
         data = np.genfromtxt('C:data.csv',dtype=None,names=True, \
                                  delimiter=',', converters = {'CST': c_date})
 
-        # make up some data
+        # Timestamp and Sentiment Data
         x = data['Timestamp']
         y = data['Sentiment']
 
@@ -60,7 +60,6 @@ def RefreashGraph():
         
         return plt.show()
 
-    # [START def_transcribe_file]
     def transcribe_file(speech_file):
         """Transcribe the given audio file."""
         from google.cloud import speech
@@ -78,18 +77,15 @@ def RefreashGraph():
             encoding=enums.RecognitionConfig.AudioEncoding.FLAC,
             sample_rate_hertz=8192,
             language_code='en-US')
-        # [END migration_audio_config_file]
 
-        # [START migration_sync_response]
         response = client.recognize(config, audio)
-        # [END migration_sync_request]
         # Each result is for a consecutive portion of the audio. Iterate through
         # them to get the transcripts for the entire audio file.
         
         for result in response.results:
             # The first alternative is the most likely one for this portion.
             print('Transcript: {}'.format(result.alternatives[0].transcript))
-        # [END migration_sync_response]
+
         # Imports the Google Cloud client library
         from google.cloud import language
         from google.cloud.language import enums
@@ -122,8 +118,6 @@ def RefreashGraph():
         fd.write(DataAsText)
         fd.close()
         Mbox("upload", "Upload Complete", 0)
-        
-    # [END def_transcribe_file]
     
     directory = os.fsencode("audio")
 
