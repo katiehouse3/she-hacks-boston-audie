@@ -1,5 +1,5 @@
 ## SheHacks Boston - Audie the Bear
-<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/593/491/datas/gallery.jpg" height="200px;"/>
+<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/593/491/datas/gallery.jpg" height="200px;"> </img>
 ### Audie's Purpose:
 Audie is a bear made to make **improve hospital experiences for children**. Audie's purpose is to facillitate discussions with children about feelings, especially for children who may experience difficulty expressing their feelings directly to adults. 
 
