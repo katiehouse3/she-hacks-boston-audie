@@ -15,7 +15,7 @@ Audie consists of three major components:
 ### Audie's Accomplishments:
 Audie won two awards at SheHacks Boston 2018, competing against over 150 hacks.
 1. **She \</SMILES>**
-2. Best Hack that Makes the Process of a "Hospital Visit" Better.
+2. **Best Hack that Makes the Process of a Hospital Visit Better**
 
 ### Audie's Requirments:
 1. An Arduino Board with a microphone and audio sensor
@@ -24,7 +24,7 @@ Audie won two awards at SheHacks Boston 2018, competing against over 150 hacks.
 4. Python 2.7 +
 
 ### Git File Description:
-`AudieMoodCalculator.py` - Use Google Speech and NLP API to Visualize Sentiment Data
-`MATLAB files` - Record speech from arduino sensors and send to Google Drive
-`audio files` - Store raw .flac audio files
-`data.csv` - Record of sentiment
+* `AudieMoodCalculator.py` - Use Google Speech and NLP API to Visualize Sentiment Data
+* `MATLAB files` - Record speech from arduino sensors and send to Google Drive
+* `audio files` - Store raw .flac audio files
+* `data.csv` - Record of sentiment
